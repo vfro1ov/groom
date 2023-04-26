@@ -7,8 +7,12 @@ import styles from './DogsPage.module.css';
 
 
 const DogsPage = () => {
-	const [breedList,setBreedList] = useState('')
+	const [dogs,setDogs] = useState('')
 	const [search, setSearch] = useState('');
+
+	const getResponse = async (url) => {
+		const res = await getApiResource(url)
+	}
 	return (
 		<>
 		<div className={styles.wrapper}>
@@ -19,7 +23,7 @@ const DogsPage = () => {
 			</div>
 			<div>
 					<h3>Породы:</h3>
-				{search.length ? <DogsList /> : <h2>no</h2>}
+				{search.length ? <DogsList dogs={dogs}/> : <h2>no</h2>}
 				</div>
 			dogs
 			</div>
