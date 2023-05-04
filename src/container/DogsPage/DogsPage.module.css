@@ -1,0 +1,14 @@
+.tabs {
+	width: 400px;
+	margin: 10px;
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+.wrapper {
+	width: 800px;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 2fr 2fr;
+}
